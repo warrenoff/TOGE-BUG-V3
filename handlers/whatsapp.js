@@ -19,3 +19,17 @@ module.exports.initWA = (config) => {
         }
     };
 };
+
+// En tête du fichier
+const path = require('path');
+
+// Modifier la configuration du client
+const client = new Client({
+    authStrategy: new LocalAuth({ 
+        dataPath: path.join(config.WA_SESSION_PATH, 'whatsapp') 
+    }),
+    puppeteer: { 
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }
+});
