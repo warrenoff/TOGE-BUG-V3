@@ -4,6 +4,7 @@ module.exports.setupCommands = (bot, wa, config) => {
     // Menu
     bot.command('menu', (ctx) => {
         ctx.replyWithMarkdownV2(`
+        *salut ! je suis TOGE-BUG-V3 un bug bot WhatsApp développer par* @lionelmelo
 📱 *COMMANDES*
 
 🔗 Appairage : 
