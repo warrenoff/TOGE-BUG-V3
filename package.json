@@ -1,7 +1,14 @@
 {
-    "dependencies": {
-        "telegraf": "^4.12.2",
-        "whatsapp-web.js": "^1.23.0",
-        "puppeteer": "^21.5.0"
-    }
+  "name": "whatsapp-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.12.2",
+    "whatsapp-web.js": "^1.23.0",
+    "qrcode": "^1.5.3",
+    "puppeteer": "^21.5.0"
+  }
 }
