@@ -38,4 +38,20 @@ module.exports = {
 
     // Paramètres de sécurité
     SECURITY: {
-        MAX_REQUESTS_PER_MINUTE: 10, // Limite de requêtes pa
+        MAX_REQUESTS_PER_MINUTE: 10, // Limite de requêtes par minute
+        BLOCKED_USERS: [] // Liste des utilisateurs bloqués
+    },
+
+    // Paramètres de l'API WhatsApp
+    WA_API: {
+        HOST: 'api.whatsapp.com',
+        TIMEOUT: 30000 // 30 secondes
+    },
+
+    // Paramètres du bot
+    BOT: {
+        PREFIX: '/', // Préfixe des commandes
+        ADMINS: ['1234567890'], // Liste des administrateurs (numéros de téléphone)
+        LOGS_ENABLED: true // Activer les logs
+    }
+};
