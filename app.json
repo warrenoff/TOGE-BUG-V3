@@ -1,0 +1,46 @@
+{
+  "name": "TOGE-BUG-V3 Bot",
+  "description": "Un bot WhatsApp puissant avec des fonctionnalités de crash et de spam.",
+  "repository": "https://github.com/toge012345/TOGE-BUG-V3",
+  "logo": "https://i.imgur.com/xyz1234.png", // Remplacez par l'URL de votre logo
+  "keywords": ["whatsapp", "bot", "telegraf", "baileys", "nodejs"],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Le token de votre bot Telegram. Obtenez-le via @BotFather.",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "Environnement d'exécution (production).",
+      "value": "production"
+    },
+    "PORT": {
+      "description": "Port sur lequel le bot écoute.",
+      "value": "3000"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "options": {
+        "version": "13"
+      }
+    },
+    {
+      "plan": "papertrail:choklad"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "npm install"
+  }
+  }
