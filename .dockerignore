@@ -1,0 +1,5 @@
+# Fichier .dockerignore
+   node_modules/
+   .env
+   .git
+   docker-compose.yml
