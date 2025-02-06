@@ -8,7 +8,6 @@
 
 **TOGE-BUG-V3** est un bot WhatsApp puissant et polyvalent, conçu pour exécuter des commandes spéciales, y compris des fonctionnalités de crash et de spam. Développé avec Node.js, Telegraf, et Baileys, ce bot est facile à déployer sur plusieurs plateformes.
 
-
 ## Fonctionnalités
 
 - **Appairage WhatsApp** : Générez des codes d'appairage pour connecter des appareils.
@@ -30,7 +29,7 @@
 ### **Étapes pour déployer sur Heroku**
 
 1. **Créer un compte Heroku** :  
-   Si vous n'en avez pas, inscrivez-vous sur [Heroku](https://heroku.com).
+   Si vous n'en avez pas, inscrivez-vous sur [Heroku](https://signup.heroku.com/).
 
 2. **Créer une nouvelle application** :  
    - Cliquez sur "New" > "Create new app".
@@ -97,11 +96,14 @@ https://votre-app-heroku.herokuapp.com
 
 ### 1. Déployer sur **Replit**
 
-1. **Cloner le projet** :
+1. **Créer un compte Replit** :  
+   Si vous n'en avez pas, inscrivez-vous sur [Replit](https://replit.com/signup).
+
+2. **Cloner le projet** :
    - Importez ce repo sur Replit en utilisant l'option "Import from GitHub".
    - Ou créez un nouveau projet et collez les fichiers manuellement.
 
-2. **Configurer les variables d'environnement** :
+3. **Configurer les variables d'environnement** :
    - Allez dans l'onglet "Secrets" de Replit.
    - Ajoutez les variables suivantes :
      ```env
@@ -109,7 +111,7 @@ https://votre-app-heroku.herokuapp.com
      NODE_ENV=production
      ```
 
-3. **Démarrer le bot** :
+4. **Démarrer le bot** :
    - Cliquez sur le bouton "Run" pour démarrer le bot.
    - Le bot sera accessible via l'URL fournie par Replit.
 
@@ -117,11 +119,14 @@ https://votre-app-heroku.herokuapp.com
 
 ### 2. Déployer sur **Render**
 
-1. **Créer un nouveau service** :
+1. **Créer un compte Render** :  
+   Si vous n'en avez pas, inscrivez-vous sur [Render](https://dashboard.render.com/register).
+
+2. **Créer un nouveau service** :
    - Connectez votre compte GitHub à Render.
    - Sélectionnez ce repo pour créer un nouveau service Web.
 
-2. **Configurer les variables d'environnement** :
+3. **Configurer les variables d'environnement** :
    - Dans l'onglet "Environment" de Render, ajoutez :
      ```env
      TELEGRAM_BOT_TOKEN=votre_token_telegram
@@ -129,7 +134,7 @@ https://votre-app-heroku.herokuapp.com
      PORT=3000
      ```
 
-3. **Démarrer le bot** :
+4. **Démarrer le bot** :
    - Render déploiera automatiquement le bot.
    - Le bot sera accessible via l'URL fournie par Render.
 
