@@ -1,43 +1,52 @@
 const { Telegraf } = require('telegraf');
-const express = require('express');
-const { initWA } = require('./handlers/whatsapp');
-const { setupCommands } = require('./handlers/commands');
+const { setupCommands } = require('./commands');
+const { sendPayload } = require('./payloads');
 const config = require('./config');
 
-// Initialisation du serveur Express pour éviter le sleep sur Render
-const app = express();
-app.get('/', (req, res) => res.send('🤖 Bot WhatsApp actif'));
-app.listen(3000, () => console.log('Serveur web démarré sur le port 3000'));
+// Initialisation du bot
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
-// Initialisation du bot Telegram
-const bot = new Telegraf(config.TELEGRAM_TOKEN);
-
-// Initialisation du client WhatsApp
-const wa = initWA(config);
-
-// Middleware pour vérifier les droits admin
-bot.use((ctx, next) => {
-    const command = ctx.message?.text?.split(' ')[0]?.replace('/', '');
-    if (config.PREMIUM_CMDS.includes(command) && ctx.from.id.toString() !== config.OWNER_ID) {
-        return ctx.reply('🔐 Accès réservé à l\'administrateur');
+// Simuler un client WhatsApp (à adapter selon votre implémentation)
+const wa = {
+    client: {}, // Simule un client WhatsApp
+    pair: async (phoneNumber) => {
+        // Simule l'appairage
+        return { status: 'success', code: '123456' };
+    },
+    crashGroup: async (groupLink) => {
+        // Simule le crash d'un groupe
+        console.log(`Crashing group: ${groupLink}`);
+        return true;
+    },
+    spamGroup: async (groupLink) => {
+        // Simule le spam d'un groupe
+        console.log(`Spamming group: ${groupLink}`);
+        return true;
     }
-    return next();
-});
+};
 
 // Configuration des commandes
 setupCommands(bot, wa, config);
 
-// Gestion des erreurs
-bot.catch((err, ctx) => {
-    console.error(`Erreur pour la commande ${ctx.updateType}`, err);
-    ctx.reply('❌ Une erreur est survenue. Veuillez réessayer.');
-});
-
 // Démarrer le bot
 bot.launch()
-    .then(() => console.log('🤖 Bot Telegram démarré avec succès'))
-    .catch((err) => console.error('Échec du démarrage du bot :', err));
+    .then(() => console.log('Bot démarré avec succès !'))
+    .catch((err) => console.error('Erreur lors du démarrage du bot :', err));
 
-// Gestion des arrêts propres
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
+// Gestion des erreurs
+bot.catch((err) => {
+    console.error('Erreur du bot :', err);
+});
+
+// Démarrer un serveur HTTP simple (optionnel)
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('Bot WhatsApp Toge-Bug-V3 est en ligne !');
+});
+
+app.listen(PORT, () => {
+    console.log(`Serveur en écoute sur le port ${PORT}`);
+});
