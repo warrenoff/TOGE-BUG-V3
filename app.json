@@ -5,42 +5,34 @@
   "logo": "https://i.ibb.co/gZw1hKq4/a1b61bd2-693c-465d-8766-a7f151fdfb65.jpg",
   "keywords": ["whatsapp", "bot", "telegraf", "baileys", "nodejs"],
   "env": {
-    "TELEGRAM_BOT_TOKEN": {
-      "description": "Le token de votre bot Telegram. Obtenez-le via @BotFather.",
+    "BOT_TOKEN": {
+      "description": "Token du bot (obligatoire). Obtenez-le via @BotFather sur Telegram.",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Votre ID utilisateur Telegram (obligatoire).",
       "required": true
     },
     "NODE_ENV": {
-      "description": "Environnement d'exécution (production).",
+      "description": "Environnement d'exécution",
       "value": "production"
-    },
-    "PORT": {
-      "description": "Port sur lequel le bot écoute.",
-      "value": "3000"
     }
   },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/docker"
     }
   ],
   "formation": {
-    "web": {
+    "worker": {
       "quantity": 1,
       "size": "free"
     }
   },
-  "addons": [
-    {
-      "plan": "heroku-postgresql:hobby-dev",
-      "options": {
-        "version": "13"
-      }
-    },
-    {
-      "plan": "papertrail:choklad"
-    }
-  ],
   "scripts": {
-    "postdeploy": "npm install"
+    "postdeploy": "echo 'Déploiement réussi!'"
   }
-  }
+}
