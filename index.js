@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Telegraf } = require('telegraf');
 const { BOT_TOKEN, ERROR_MESSAGES } = require('./config');
-const setupCommands = require('./command');
+const setupCommands = require('./handlers/command');
 
 // Vérification du token
 if (!BOT_TOKEN) {
