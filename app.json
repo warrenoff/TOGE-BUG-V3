@@ -2,7 +2,7 @@
   "name": "TOGE-BUG-V3 Bot",
   "description": "Un bot WhatsApp puissant avec des fonctionnalités de crash et de spam.",
   "repository": "https://github.com/toge012345/TOGE-BUG-V3",
-  "logo": "https://i.imgur.com/xyz1234.png", // Remplacez par l'URL de votre logo
+  "logo": "https://i.ibb.co/gZw1hKq4/a1b61bd2-693c-465d-8766-a7f151fdfb65.jpg",
   "keywords": ["whatsapp", "bot", "telegraf", "baileys", "nodejs"],
   "env": {
     "TELEGRAM_BOT_TOKEN": {
