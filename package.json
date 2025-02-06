@@ -1,18 +1,19 @@
 {
   "name": "toge-bug-v3-bot",
   "version": "1.0.0",
-  "description": "Un bot WhatsApp pour des commandes spéciales, y compris le crash de groupes.",
+  "description": "Bot WhatsApp avec fonctionnalités de crash et de spam",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docker:build": "docker build -t toge-bug-bot .",
+    "docker:run": "docker run -e TELEGRAM_BOT_TOKEN='votre_token' -p 3000:3000 toge-bug-bot"
   },
   "dependencies": {
     "telegraf": "^4.12.0",
     "express": "^4.18.2",
     "@adiwajshing/baileys": "^6.0.0",
-    "dotenv": "^16.3.1"
+    "crypto-js": "^4.1.1",
+    "javascript-obfuscator": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
@@ -20,10 +21,14 @@
   "keywords": [
     "whatsapp",
     "bot",
-    "crash",
-    "spam",
-    "telegraf"
+    "telegraf",
+    "baileys"
   ],
-  "author": "Lionel Melo",
-  "license": "MIT"
+  "author": "toge012345",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
 }
