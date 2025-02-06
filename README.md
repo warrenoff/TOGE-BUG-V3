@@ -27,6 +27,74 @@
 
 ---
 
+### **Étapes pour déployer sur Heroku**
+
+1. **Créer un compte Heroku** :  
+   Si vous n'en avez pas, inscrivez-vous sur [Heroku](https://heroku.com).
+
+2. **Créer une nouvelle application** :  
+   - Cliquez sur "New" > "Create new app".
+   - Donnez un nom à votre application et choisissez une région.
+
+3. **Connecter GitHub** :  
+   - Allez dans l'onglet "Deploy" > "Connect to GitHub".
+   - Sélectionnez votre repo (`toge-bug-v3-bot`).
+
+4. **Configurer les variables d'environnement** :  
+   - Allez dans l'onglet "Settings" > "Config Vars".
+   - Ajoutez les variables suivantes :
+     ```env
+     TELEGRAM_BOT_TOKEN=votre_token_telegram
+     NODE_ENV=production
+     PORT=3000
+     ```
+
+5. **Déployer** :  
+   - Dans l'onglet "Deploy", cliquez sur "Deploy Branch".
+   - Heroku installera les dépendances et démarrera le bot.
+
+6. **Vérifier les logs** :  
+   - Allez dans l'onglet "Resources" et activez le dyno `web`.
+   - Vérifiez les logs pour confirmer que le bot fonctionne.
+
+---
+
+### **Accéder au bot**
+
+Une fois déployé, votre bot sera accessible via l'URL suivante :  
+```
+https://votre-app-heroku.herokuapp.com
+```
+
+---
+
+### **Add-ons recommandés**
+
+- **Heroku Postgres** : Pour stocker des données (optionnel).
+- **Papertrail** : Pour surveiller les logs en temps réel.
+- **Heroku Scheduler** : Pour exécuter des tâches planifiées.
+
+---
+
+### **Problèmes courants**
+
+| Problème                          | Solution                                                                 |
+|-----------------------------------|--------------------------------------------------------------------------|
+| `Error: Cannot find module`       | Vérifiez que toutes les dépendances sont installées (`npm install`).    |
+| `Port already in use`             | Assurez-vous que le port `3000` est libre.                              |
+| `Telegram token invalid`          | Vérifiez la variable `TELEGRAM_BOT_TOKEN`.                              |
+| `WhatsApp connection failed`      | Assurez-vous que `@adiwajshing/baileys` est correctement configuré.     |
+
+---
+
+### **Documentation Officielle**
+
+- **[Heroku Node.js Guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs)**
+- **[Telegraf Documentation](https://telegraf.js.org/)**
+- **[Baileys Documentation](https://github.com/adiwajshing/Baileys)**
+
+---
+
 ### 1. Déployer sur **Replit**
 
 1. **Cloner le projet** :
