@@ -1,0 +1,9 @@
+# .replit
+language = "nodejs"
+run = "npm start"
+
+[nix]
+channel = "stable-23_11"
+
+[env]
+TELEGRAM_BOT_TOKEN = "votre_token_telegram_ici"
