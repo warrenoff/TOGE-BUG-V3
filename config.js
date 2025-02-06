@@ -1,9 +1,12 @@
+// Importation de dotenv pour lire les variables d'environnement
+require('dotenv').config();
+
 module.exports = {
     // Token du bot (nécessaire pour l'authentification avec l'API)
-    BOT_TOKEN: 'VOTRE_TOKEN_ICI', // Remplacez par le token de votre bot
+    BOT_TOKEN: process.env.BOT_TOKEN, // Récupère le token depuis .env
 
     // ID du propriétaire (pour les commandes admin ou les restrictions)
-    OWNER_ID: 'VOTRE_ID_ICI', // Remplacez par votre ID utilisateur
+    OWNER_ID: process.env.OWNER_ID, // Récupère l'ID depuis .env
 
     // Commandes premium disponibles
     PREMIUM_CMDS: [
@@ -35,20 +38,4 @@ module.exports = {
 
     // Paramètres de sécurité
     SECURITY: {
-        MAX_REQUESTS_PER_MINUTE: 10, // Limite de requêtes par minute
-        BLOCKED_USERS: [] // Liste des utilisateurs bloqués
-    },
-
-    // Paramètres de l'API WhatsApp
-    WA_API: {
-        HOST: 'api.whatsapp.com',
-        TIMEOUT: 30000 // 30 secondes
-    },
-
-    // Paramètres du bot
-    BOT: {
-        PREFIX: '/', // Préfixe des commandes
-        ADMINS: ['1234567890'], // Liste des administrateurs (numéros de téléphone)
-        LOGS_ENABLED: true // Activer les logs
-    }
-};
+        MAX_REQUESTS_PER_MINUTE: 10, // Limite de requêtes pa
