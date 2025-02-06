@@ -1,1 +1,35 @@
-const _0x4d1325=_0x5509;function _0x40d9(){const _0x5240cd=['10ntPSUN','Erreur\x20du\x20bot\x20:','log','890SZncYV','./payloads','26719ccdTLA','telegraf','24642EHKmTo','./commands','123456','./config','send','express','297093NljEug','Crashing\x20group:\x20','env','Serveur\x20en\x20écoute\x20sur\x20le\x20port\x20','then','871853LQFXhO','238399hZiNVY','150rvdeuQ','error','Erreur\x20lors\x20du\x20démarrage\x20du\x20bot\x20:','88kglipg','launch','catch','success','Spamming\x20group:\x20','TELEGRAM_BOT_TOKEN','260ThbRhZ','3091030BEOdlT','2379960mtHRlc','8SyEHFp','get'];_0x40d9=function(){return _0x5240cd;};return _0x40d9();}(function(_0x4f0cac,_0x25c628){const _0x1a48ed=_0x5509,_0x47adfc=_0x4f0cac();while(!![]){try{const _0x4c844b=-parseInt(_0x1a48ed(0x83))/0x1+parseInt(_0x1a48ed(0x93))/0x2*(-parseInt(_0x1a48ed(0x7e))/0x3)+parseInt(_0x1a48ed(0x91))/0x4*(-parseInt(_0x1a48ed(0x8f))/0x5)+-parseInt(_0x1a48ed(0x85))/0x6*(parseInt(_0x1a48ed(0x84))/0x7)+parseInt(_0x1a48ed(0x88))/0x8*(-parseInt(_0x1a48ed(0x9a))/0x9)+parseInt(_0x1a48ed(0x96))/0xa*(parseInt(_0x1a48ed(0x98))/0xb)+parseInt(_0x1a48ed(0x90))/0xc*(parseInt(_0x1a48ed(0x8e))/0xd);if(_0x4c844b===_0x25c628)break;else _0x47adfc['push'](_0x47adfc['shift']());}catch(_0x113079){_0x47adfc['push'](_0x47adfc['shift']());}}}(_0x40d9,0xaa5da));const {Telegraf}=require(_0x4d1325(0x99)),{setupCommands}=require(_0x4d1325(0x79)),{sendPayload}=require(_0x4d1325(0x97)),config=require(_0x4d1325(0x7b)),bot=new Telegraf(process[_0x4d1325(0x80)][_0x4d1325(0x8d)]),wa={'client':{},'pair':async _0x12ddd9=>{const _0x9fcd8a=_0x4d1325;return{'status':_0x9fcd8a(0x8b),'code':_0x9fcd8a(0x7a)};},'crashGroup':async _0x287130=>{const _0x5c305e=_0x4d1325;return console[_0x5c305e(0x95)](_0x5c305e(0x7f)+_0x287130),!![];},'spamGroup':async _0xd5d87a=>{const _0x21e2ce=_0x4d1325;return console[_0x21e2ce(0x95)](_0x21e2ce(0x8c)+_0xd5d87a),!![];}};function _0x5509(_0x1271bc,_0x158dba){const _0x40d9e8=_0x40d9();return _0x5509=function(_0x550960,_0x1e707a){_0x550960=_0x550960-0x79;let _0xc37b74=_0x40d9e8[_0x550960];return _0xc37b74;},_0x5509(_0x1271bc,_0x158dba);}setupCommands(bot,wa,config),bot[_0x4d1325(0x89)]()[_0x4d1325(0x82)](()=>console[_0x4d1325(0x95)]('Bot\x20démarré\x20avec\x20succès\x20!'))[_0x4d1325(0x8a)](_0x33cbd0=>console[_0x4d1325(0x86)](_0x4d1325(0x87),_0x33cbd0)),bot['catch'](_0x4e7d45=>{const _0xcf91d8=_0x4d1325;console[_0xcf91d8(0x86)](_0xcf91d8(0x94),_0x4e7d45);});const express=require(_0x4d1325(0x7d)),app=express(),PORT=process['env']['PORT']||0xbb8;app[_0x4d1325(0x92)]('/',(_0x2974f4,_0x3adff9)=>{const _0x1a1c09=_0x4d1325;_0x3adff9[_0x1a1c09(0x7c)]('Bot\x20WhatsApp\x20Toge-Bug-V3\x20est\x20en\x20ligne\x20!');}),app['listen'](PORT,()=>{const _0x1a2b21=_0x4d1325;console['log'](_0x1a2b21(0x81)+PORT);});
+require('dotenv').config();
+const { Telegraf } = require('telegraf');
+const { BOT_TOKEN, ERROR_MESSAGES } = require('./config');
+const setupCommands = require('./command');
+
+// Vérification du token
+if (!BOT_TOKEN) {
+    console.error(ERROR_MESSAGES.MISSING_TOKEN);
+    process.exit(1);
+}
+
+const bot = new Telegraf(BOT_TOKEN);
+
+// Initialisation
+try {
+    // Configuration des commandes
+    setupCommands(bot);
+    
+    // Gestion des erreurs
+    bot.catch((err) => {
+        console.error(ERROR_MESSAGES.UNKNOWN_ERROR, err);
+    });
+
+    // Démarrage du bot
+    bot.launch().then(() => {
+        console.log('🤖 Bot démarré avec succès');
+    });
+
+} catch (err) {
+    console.error(ERROR_MESSAGES.STARTUP_FAILURE, err);
+}
+
+// Gestion des arrêts propres
+process.on('SIGINT', () => bot.stop('SIGINT'));
+process.on('SIGTERM', () => bot.stop('SIGTERM'));
