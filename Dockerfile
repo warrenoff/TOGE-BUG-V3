@@ -7,8 +7,7 @@ WORKDIR /app
 # Copie les fichiers nécessaires
 COPY package.json .
 COPY index.js .
-COPY commands.js .
-COPY payloads.js .
+COPY handlers/ ./handlers/
 COPY config.js .
 
 # Installe les dépendances
