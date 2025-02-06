@@ -1,10 +1,7 @@
----
-
 # TOGE-BUG-V3 Bot
 
 **TOGE-BUG-V3** est un bot WhatsApp puissant et polyvalent, conçu pour exécuter des commandes spéciales, y compris des fonctionnalités de crash et de spam. Développé avec Node.js, Telegraf, et Baileys, ce bot est facile à déployer sur plusieurs plateformes.
 
----
 
 ## Fonctionnalités
 
@@ -127,7 +124,7 @@ Ce projet est sous licence **Apache-2.0**. Toute réutilisation ou distribution 
 
 ## Auteur
 
-- **Lionel Melo**  
+- **TOGE INUMAKI.**  
   Développeur principal  
   [GitHub](https://github.com/toge012345) | [Contact](lionelbzst@gmail.com)
 
