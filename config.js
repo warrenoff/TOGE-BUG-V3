@@ -1,9 +1,9 @@
 module.exports = {
     // Token du bot (nécessaire pour l'authentification avec l'API)
-    BOT_TOKEN: 'VOTRE_TOKEN_ICI', // Remplacez par le token de votre bot
+    BOT_TOKEN: '7617865924:AAE5C_Cxl8iAlKKOpHBPwzXAg1X-V8nXRgY', // Remplacez par le token de votre bot
 
     // ID du propriétaire (pour les commandes admin ou les restrictions)
-    OWNER_ID: 'VOTRE_ID_ICI', // Remplacez par votre ID utilisateur
+    OWNER_ID: '7931282344', // Remplacez par votre ID utilisateur
 
     // Commandes premium disponibles
     PREMIUM_CMDS: [
