@@ -1,12 +1,9 @@
-// Importation de dotenv pour lire les variables d'environnement
-require('dotenv').config();
-
 module.exports = {
     // Token du bot (nécessaire pour l'authentification avec l'API)
-    BOT_TOKEN: process.env.BOT_TOKEN, // Récupère le token depuis .env
+    BOT_TOKEN: 'VOTRE_TOKEN_ICI', // Remplacez par le token de votre bot
 
     // ID du propriétaire (pour les commandes admin ou les restrictions)
-    OWNER_ID: process.env.OWNER_ID, // Récupère l'ID depuis .env
+    OWNER_ID: 'VOTRE_ID_ICI', // Remplacez par votre ID utilisateur
 
     // Commandes premium disponibles
     PREMIUM_CMDS: [
